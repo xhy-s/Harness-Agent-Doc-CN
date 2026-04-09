@@ -26,8 +26,9 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      - working-directory: website
-        run: npm ci
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+        working-directory: website
       - working-directory: website
         run: npm run build
       - name: Setup Pages
