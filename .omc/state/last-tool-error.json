@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git status && git remote -v\",\"description\":\"Check git status and remote\"}",
+  "error": "Exit code 128\nfatal: not a git repository (or any of the parent directories): .git",
+  "timestamp": "2026-04-09T07:25:25.043Z",
+  "retry_count": 1
+}
