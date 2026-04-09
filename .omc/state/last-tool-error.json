@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"git status && git remote -v\",\"description\":\"Check git status and remote\"}",
-  "error": "Exit code 128\nfatal: not a git repository (or any of the parent directories): .git",
-  "timestamp": "2026-04-09T07:25:25.043Z",
+  "tool_input_preview": "{\"command\":\"git push -u origin master\",\"description\":\"Push to GitHub remote\"}",
+  "error": "Exit code 128\nfatal: unable to access 'https://github.com/xhy-s/Harness-Agent-Doc-CN.git/': Recv failure: Connection was reset",
+  "timestamp": "2026-04-09T07:26:40.237Z",
   "retry_count": 1
 }

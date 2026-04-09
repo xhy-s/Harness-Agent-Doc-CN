@@ -76,11 +76,16 @@ body {
 /* ============================================
    NAVIGATION BAR - Refined Dark
    ============================================ */
-.navbar {
-  background: linear-gradient(180deg, #1c1917 0%, #292524 100%) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  padding: 0.75rem 1.5rem;
+.navbar,
+.navbar.navbar {
+  background: #1c1917 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+header.navbar {
+  background: #1c1917 !important;
 }
 
 .navbar__brand {
@@ -99,11 +104,12 @@ body {
   background-clip: text;
 }
 
-.navbar__link {
+.navbar__link,
+.navbar__link.navbar__link {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
-  color: rgba(254, 253, 251, 0.85) !important;
+  color: #d6d3d1 !important;
   padding: 0.5rem 1rem !important;
   border-radius: 8px;
   transition: all var(--transition-fast);
@@ -112,7 +118,7 @@ body {
 
 .navbar__link:hover {
   color: #d97706 !important;
-  background: rgba(212, 83, 9, 0.1);
+  background: rgba(212, 83, 9, 0.1) !important;
 }
 
 .navbar__link--active {
@@ -618,20 +624,32 @@ tr:hover td {
 /* ============================================
    FOOTER
    ============================================ */
-.footer {
-  background: var(--text-ink) !important;
-  color: rgba(255,255,255,0.7) !important;
+.footer,
+.footer.footer {
+  background: #1c1917 !important;
+  color: #d6d3d1 !important;
   padding: 3rem 0 !important;
   margin-top: 4rem;
 }
 
-.footer__link-item {
-  color: rgba(255,255,255,0.7) !important;
+.footer__title {
+  color: #fefdfb !important;
+  font-weight: 700;
+}
+
+.footer__link-item,
+.footer__link-item.footer__link-item {
+  color: #d6d3d1 !important;
   transition: color var(--transition-fast);
 }
 
 .footer__link-item:hover {
-  color: var(--ink-primary-light) !important;
+  color: #d97706 !important;
+}
+
+.footer__copyright,
+.footer__copyright.footer__copyright {
+  color: #78716c !important;
 }
 
 /* ============================================
