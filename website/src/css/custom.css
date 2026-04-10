@@ -18,28 +18,28 @@
   --ink-danger: #dc2626;
   --ink-warning: #f59e0b;
 
-  /* Paper tones */
-  --paper-white: #fefdfb;
-  --paper-warm: #faf8f5;
-  --paper-cream: #f5f3ef;
-  --paper-aged: #f0ebe3;
-  --paper-border: #e8e2d9;
+  /* Paper tones - Dark mode */
+  --paper-white: #1c1917;
+  --paper-warm: #292524;
+  --paper-cream: #1c1917;
+  --paper-aged: #292524;
+  --paper-border: #44403c;
 
-  /* Text colors */
-  --text-ink: #1c1917;
-  --text-charcoal: #44403c;
-  --text-stone: #78716c;
-  --text-muted: #a8a29e;
+  /* Text colors - Dark mode */
+  --text-ink: #fafaf9;
+  --text-charcoal: #d6d3d1;
+  --text-stone: #a8a29e;
+  --text-muted: #78716c;
 
-  /* Code block colors */
-  --code-bg: #f5f5f5;
-  --code-surface: #eeeeee;
-  --code-border: #e0e0e0;
-  --code-string: #22863a;
-  --code-keyword: #d73a49;
-  --code-comment: #6a737d;
-  --code-function: #6f42c1;
-  --code-number: #005cc5;
+  /* Code block colors - Dark mode */
+  --code-bg: #1c1917;
+  --code-surface: #292524;
+  --code-border: #44403c;
+  --code-string: #4ade80;
+  --code-keyword: #f472b6;
+  --code-comment: #78716c;
+  --code-function: #c084fc;
+  --code-number: #38bdf8;
 
   /* Typography */
   --font-heading: 'Crimson Pro', Georgia, serif;
@@ -58,6 +58,26 @@
   --transition-slow: 400ms ease;
 }
 
+[data-theme='light'] {
+  --paper-white: #fefdfb;
+  --paper-warm: #faf8f5;
+  --paper-cream: #f5f3ef;
+  --paper-aged: #f0ebe3;
+  --paper-border: #e8e2d9;
+  --text-ink: #1c1917;
+  --text-charcoal: #44403c;
+  --text-stone: #78716c;
+  --text-muted: #a8a29e;
+  --code-bg: #f5f5f5;
+  --code-surface: #eeeeee;
+  --code-border: #e0e0e0;
+  --code-string: #22863a;
+  --code-keyword: #d73a49;
+  --code-comment: #6a737d;
+  --code-function: #6f42c1;
+  --code-number: #005cc5;
+}
+
 /* ============================================
    BASE STYLES
    ============================================ */
@@ -67,7 +87,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--paper-warm);
+  background: var(--paper-warm) !important;
   color: var(--text-charcoal);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -78,14 +98,14 @@ body {
    ============================================ */
 .navbar,
 .navbar.navbar {
-  background: #1c1917 !important;
-  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  background: var(--paper-white) !important;
+  border-bottom: 1px solid var(--paper-border) !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
   padding: 0.75rem 1.5rem !important;
 }
 
 header.navbar {
-  background: #1c1917 !important;
+  background: var(--paper-white) !important;
 }
 
 .navbar__brand {
@@ -96,9 +116,9 @@ header.navbar {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fefdfb !important;
+  color: var(--text-ink) !important;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #fefdfb 0%, #d97706 100%);
+  background: linear-gradient(135deg, var(--text-ink) 0%, var(--ink-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -109,7 +129,7 @@ header.navbar {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
-  color: #d6d3d1 !important;
+  color: var(--text-charcoal) !important;
   padding: 0.5rem 1rem !important;
   border-radius: 8px;
   transition: all var(--transition-fast);
@@ -117,8 +137,8 @@ header.navbar {
 }
 
 .navbar__link:hover {
-  color: #d97706 !important;
-  background: rgba(212, 83, 9, 0.1) !important;
+  color: var(--ink-primary) !important;
+  background: rgba(180, 83, 9, 0.1) !important;
 }
 
 .navbar__link--active {
@@ -626,30 +646,31 @@ tr:hover td {
    ============================================ */
 .footer,
 .footer.footer {
-  background: #1c1917 !important;
-  color: #d6d3d1 !important;
+  background: var(--paper-white) !important;
+  color: var(--text-charcoal) !important;
   padding: 3rem 0 !important;
   margin-top: 4rem;
+  border-top: 1px solid var(--paper-border);
 }
 
 .footer__title {
-  color: #fefdfb !important;
+  color: var(--text-ink) !important;
   font-weight: 700;
 }
 
 .footer__link-item,
 .footer__link-item.footer__link-item {
-  color: #d6d3d1 !important;
+  color: var(--text-charcoal) !important;
   transition: color var(--transition-fast);
 }
 
 .footer__link-item:hover {
-  color: #d97706 !important;
+  color: var(--ink-primary) !important;
 }
 
 .footer__copyright,
 .footer__copyright.footer__copyright {
-  color: #78716c !important;
+  color: var(--text-muted) !important;
 }
 
 /* ============================================
